@@ -97,7 +97,7 @@ Run Real-Time Visualization
 - we can see the chart update live
 
 -------------------------------------------------------
-8️⃣ Verify Output
+Verify Output
 -------------------------------------------------------
 - Check MongoDB Compass for inserted documents
 - Verify dashboard.png in the folder
