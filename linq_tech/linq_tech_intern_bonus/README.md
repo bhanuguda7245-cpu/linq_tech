@@ -33,3 +33,72 @@ Before running the project, ensure the following are installed:
 - Install required Python packages:
   ```bash
   pip install pymongo pandas matplotlib
+  -- Optional for real-time visualization bonus
+  pip install streamlit
+  
+pymongo → For connecting to MongoDB
+pandas → For data handling and transformation
+matplotlib → For static and real-time visualization
+streamlit (optional) → web dashboard bonus
+
+Run Steps :
+-------------------------------------------------------
+Prerequisites
+-------------------------------------------------------
+- Install Python 3.8+
+- Install MongoDB locally (default port: 27017)
+- Install MongoDB Compass to verify data
+
+Install Python packages:
+pip install pymongo pandas matplotlib
+pip install streamlit
+
+-------------------------------------------------------
+Start MongoDB
+-------------------------------------------------------
+- Start MongoDB server locally:
+  mongod
+- Verify connection at:
+  mongodb://localhost:27017
+
+-------------------------------------------------------
+Navigate to Project Folder
+-------------------------------------------------------
+cd linq_tech (file_name)
+
+-------------------------------------------------------
+Setup Database
+-------------------------------------------------------
+python datastore_setup.py
+- Creates database: linq_db
+- Creates collection: metrics
+
+-------------------------------------------------------
+Insert Sample Data
+-------------------------------------------------------
+python data_ingest.py
+- Inserts 50 mock records with:
+  category, value, timestamp, status
+
+-------------------------------------------------------
+Generate Static Visualization
+-------------------------------------------------------
+python visualization.py
+- Displays line chart
+- Saves output as dashboard.png
+
+-------------------------------------------------------
+Run Real-Time Visualization
+-------------------------------------------------------
+1. In first terminal:
+   python real_time_visualization.py
+2. In second terminal:
+   python data_ingest.py
+- we can see the chart update live
+
+-------------------------------------------------------
+8️⃣ Verify Output
+-------------------------------------------------------
+- Check MongoDB Compass for inserted documents
+- Verify dashboard.png in the folder
+
